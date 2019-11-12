@@ -18,7 +18,7 @@
                         <v-icon>{{ item.icon }}</v-icon>
                     </v-list-item-icon>
                     <v-list-item-content>
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        <v-list-item-title><v-btn text router v-bind:to="item.route">{{item.title}}</v-btn></v-list-item-title>
                     </v-list-item-content>
                 </v-list-item>
             </v-list>
@@ -29,14 +29,13 @@
             </template>
         </v-navigation-drawer>
         <v-app-bar dark app fixed clipped-left height="70px" color="grey darken-3">
-            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-barnav-icon>
+            <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
                 <VSpacer />
                 <img src="../assets/logo.svg" style="height:45px;width:45px">
-
                 <v-toolbar-title style="font-size: 21px;" class="white--text ml-2">
                     PAW-UAJY
                 </v-toolbar-title>
-            </v-app-bar-nav-icon>
+            </v-app-bar>
         </v-app-bar>
         <VContent>
             <router-view />
@@ -48,10 +47,19 @@
         data() {
             return {
                 drawer: null,
-                items: [{
-                    title: 'User Controller',
-                    icon: 'mdi-human-male'
-                }, ],
+                items: [
+                    {
+                        title: 'User Controller',
+                        icon: 'mdi-human-male',
+                        route: '/'
+                    }, 
+                    {
+                        title: 'Spare Controller',
+                        icon: 'mdi-human-male',
+                        route: '/spareparts'
+                    },
+                
+                ],
             }
         },
     }

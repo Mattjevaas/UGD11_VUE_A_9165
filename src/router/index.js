@@ -16,6 +16,11 @@ function loadView(view)
                     name: 'UserController',
                     path: '',
                     component: loadView('userController')
+                },
+                {
+                    name: 'SpareController',
+                    path: '/spareparts',
+                    component: loadView('spareController')
                 }
             ]
         },
