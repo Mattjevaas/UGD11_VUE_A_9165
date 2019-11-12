@@ -51,7 +51,7 @@
                     {
                         title: 'User Controller',
                         icon: 'mdi-human-male',
-                        route: '/'
+                        route: '/user'
                     }, 
                     {
                         title: 'Spare Controller',

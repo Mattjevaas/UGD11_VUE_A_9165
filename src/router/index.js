@@ -14,13 +14,18 @@ function loadView(view)
             children: [
                 {
                     name: 'UserController',
-                    path: '',
+                    path: '/user',
                     component: loadView('userController')
                 },
                 {
                     name: 'SpareController',
                     path: '/spareparts',
                     component: loadView('spareController')
+                },
+                {
+                    name: 'LandingController',
+                    path: '',
+                    component: loadView('landingController')
                 }
             ]
         },
